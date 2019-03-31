@@ -3,7 +3,7 @@ import {Helmet} from "react-helmet";
 import {seo, rssLink, title} from "../../site-config";
 import favicon from "../images/favicon.png";
 
-class seoTagGenerate extends Component {
+class seoTagGenerator extends Component {
     render() {
         return (
             <Helmet>
@@ -46,13 +46,10 @@ class seoTagGenerate extends Component {
                     <meta property="article:modified_time" content={this.props.modified_time}/>
                     : null}
 
-
-                {/* TODO: Add {children} */}
-
-
+                {this.props.children}
             </Helmet>
         );
     }
 }
 
-export default seoTagGenerate;
+export default seoTagGenerator;
